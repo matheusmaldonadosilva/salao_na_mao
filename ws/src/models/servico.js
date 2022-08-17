@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const servico = new Schema({
     salaoId: {
         type: mongoose.Types.ObjectId,
-        ref: 'Salao'
+        ref: 'Salao',
+        required: true
     },
     titulo: {
         type: String,
@@ -27,14 +28,14 @@ const servico = new Schema({
         required: true  
     },
     descricao: {
-        type: Number,
+        type: String,
         required: true  
     },
     status: {
         type: String,
         required: true,
         enum: ['A', 'I', 'E'],
-        default: 'A'
+        default: 'A',
     },
 });
 

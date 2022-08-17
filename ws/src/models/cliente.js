@@ -40,12 +40,20 @@ const cliente = new Schema({
     documento: {
         tipo: {
             type: String,
+            enum: ['individual', 'corporation'],
             required: true  
         },
         numero: {
             type: String,
             required: true  
         }
+    },
+    endereco: {
+        cidade: String,
+        uf: String,
+        cep: String,
+        numero: String,
+        pais: String
     },
 });
 

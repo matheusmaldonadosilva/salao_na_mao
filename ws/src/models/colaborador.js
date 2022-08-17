@@ -46,6 +46,10 @@ const colaborador = new Schema({
             type: String,
             required: true
         },
+        banco: {
+            type: String,
+            required: true
+        },
         tipo: {
             type: String,
             required: true
